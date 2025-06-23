@@ -10,6 +10,7 @@ import { convertToGPA } from '@/utils/gpaConverter';
 
 interface ClassGrade {
   id: number;
+  name: string;
   percentage: number;
   gpa: number;
 }
@@ -21,12 +22,18 @@ const GPACalculator = () => {
   const [nextId, setNextId] = useState<number>(1);
 
   const addClass = () => {
-    setClasses([...classes, { id: nextId, percentage: 0, gpa: 0 }]);
+    setClasses([...classes, { id: nextId, name: '', percentage: 0, gpa: 0 }]);
     setNextId(nextId + 1);
   };
 
   const removeClass = (id: number) => {
     setClasses(classes.filter(cls => cls.id !== id));
+  };
+
+  const updateClassName = (id: number, name: string) => {
+    setClasses(classes.map(cls => 
+      cls.id === id ? { ...cls, name } : cls
+    ));
   };
 
   const updateClassPercentage = (id: number, percentage: number) => {
@@ -64,7 +71,6 @@ const GPACalculator = () => {
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
             GPA Calculator
           </h1>
-          <p className="text-gray-600 text-lg">Convert your percentages to GPA with AP class bonuses</p>
         </div>
 
         {/* AP Classes Input */}
@@ -117,21 +123,36 @@ const GPACalculator = () => {
             ) : (
               classes.map((cls, index) => (
                 <div key={cls.id} className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-1">
-                    <Label htmlFor={`class-${cls.id}`} className="text-sm font-medium">
-                      Class {index + 1} Percentage:
-                    </Label>
-                    <Input
-                      id={`class-${cls.id}`}
-                      type="number"
-                      min="0"
-                      max="100"
-                      step="0.1"
-                      value={cls.percentage || ''}
-                      onChange={(e) => updateClassPercentage(cls.id, parseFloat(e.target.value) || 0)}
-                      className="mt-1"
-                      placeholder="Enter percentage (0-100)"
-                    />
+                  <div className="flex-1 space-y-3">
+                    <div>
+                      <Label htmlFor={`class-name-${cls.id}`} className="text-sm font-medium">
+                        Class Name:
+                      </Label>
+                      <Input
+                        id={`class-name-${cls.id}`}
+                        type="text"
+                        value={cls.name}
+                        onChange={(e) => updateClassName(cls.id, e.target.value)}
+                        className="mt-1"
+                        placeholder={`Class ${index + 1}`}
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor={`class-percentage-${cls.id}`} className="text-sm font-medium">
+                        Percentage:
+                      </Label>
+                      <Input
+                        id={`class-percentage-${cls.id}`}
+                        type="number"
+                        min="0"
+                        max="100"
+                        step="0.1"
+                        value={cls.percentage || ''}
+                        onChange={(e) => updateClassPercentage(cls.id, parseFloat(e.target.value) || 0)}
+                        className="mt-1"
+                        placeholder="Enter percentage (0-100)"
+                      />
+                    </div>
                   </div>
                   <div className="text-center">
                     <div className="text-sm text-gray-500 mb-1">GPA</div>
