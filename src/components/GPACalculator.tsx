@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -57,18 +56,18 @@ const GPACalculator = () => {
 
   const getGradeColor = (gpa: number) => {
     if (gpa >= 4.0) return 'bg-green-500';
-    if (gpa >= 3.5) return 'bg-blue-500';
+    if (gpa >= 3.5) return 'bg-purple-400';
     if (gpa >= 3.0) return 'bg-yellow-500';
     if (gpa >= 2.0) return 'bg-orange-500';
     return 'bg-red-500';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 p-4">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent mb-2">
             WCSD GPA Calculator
           </h1>
         </div>
@@ -77,7 +76,7 @@ const GPACalculator = () => {
         <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
-              <Calculator className="h-5 w-5 text-blue-600" />
+              <Calculator className="h-5 w-5 text-purple-600" />
               AP Classes
             </CardTitle>
           </CardHeader>
@@ -108,7 +107,7 @@ const GPACalculator = () => {
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               <span className="text-xl">Your Classes</span>
-              <Button onClick={addClass} className="bg-blue-600 hover:bg-blue-700">
+              <Button onClick={addClass} className="bg-purple-600 hover:bg-purple-700">
                 <Plus className="h-4 w-4 mr-2" />
                 Add Class
               </Button>
@@ -175,7 +174,7 @@ const GPACalculator = () => {
         </Card>
 
         {/* Results */}
-        <Card className="shadow-lg border-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <Card className="shadow-lg border-0 bg-gradient-to-r from-purple-600 to-purple-700 text-white">
           <CardHeader>
             <CardTitle className="text-center text-2xl">Your Total GPA</CardTitle>
           </CardHeader>
@@ -185,7 +184,7 @@ const GPACalculator = () => {
                 {totalGPA.toFixed(3)}
               </div>
               {classes.length > 0 && (
-                <div className="text-blue-100 text-sm">
+                <div className="text-purple-100 text-sm">
                   Based on {classes.length} classes
                   {apClasses > 0 && ` with ${apClasses} AP bonus${apClasses > 1 ? 'es' : ''}`}
                 </div>
