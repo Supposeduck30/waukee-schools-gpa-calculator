@@ -31,5 +31,5 @@ This project:
 - If teacher rounds your letter grade and doesn't change the percent, then adjust your percent to the new letter grade when inputting it accordingly (The calculator doesn't know if your teacher changed your letter grade and kept your percentage the same)
 - Putting in illogical inputs skews the math (like putting in more ap classes than total classes)
 
-## 🚀 Upcoming features
+## 🚀 Upcoming Features
 - It will soon be off of letter grades, instead of percentage
