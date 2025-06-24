@@ -9,7 +9,11 @@ This project:
 
 ## 🕓 Version History
 ### Version 1.0.0
- 
+- Purple and white color scheme
+- Input for class name and percentages
+- Seperate input for number of ap classes
+- Reference for how gpa is calculated at the bottom
+
 ## 🛠️ How to tweak for your own uses
 1. Fork the repository
    
