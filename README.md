@@ -37,3 +37,6 @@ This project:
 
 ## 🚀 Upcoming Features
 - It will soon be off of letter grades, instead of percentage
+
+## ⚖️ LICENSE
+### MIT LICENSE
