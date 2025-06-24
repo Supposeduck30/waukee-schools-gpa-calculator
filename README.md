@@ -8,7 +8,8 @@ This project:
 - is hosted via Loveable.app 
 
 ## 🕓 Version History
-
+### Version 1.0.0
+ 
 ## 🛠️ How to tweak for your own uses
 1. Fork the repository
    
