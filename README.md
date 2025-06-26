@@ -38,6 +38,10 @@ This project:
 - The number of AP classes * 5 is also added into the total
 - That total then gets divided by the total number of classes
 
+## 🚀 Upcoming Features
+- Easier interface that makes it more efficient for users with a high amount of classes taken
+  - It will asks how many classes had A+, A, etc
+
 ## ⚠️ Known Issues
 - No known issues at this time
 
