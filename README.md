@@ -3,7 +3,7 @@
 ## https://waukee-schools-gpa-calculator.lovable.app/
 This project:
 - has accurate GPA calculation based on WCSD rules
-- has a custom input for course names and percentages
+- has a custom input for course names and letter grades
 - incorporates a simple and easy to use design
 - is hosted via Loveable.app 
 
@@ -14,6 +14,13 @@ This project:
 - Seperate input for number of ap classes
 - Reference for how gpa is calculated at the bottom
 
+### Version 1.1.0
+- Input that asks you how many classes you have and then generates that amount of classes to input your grade in
+- Seperate input for number of ap classes
+- Changed input to letter grades rather than percentages
+- Removed the reference at the bottom
+- Made it impossible for user to input more AP classes than total classes
+  
 ## 🛠️ How to tweak for your own uses
 1. Fork the repository
    
@@ -26,17 +33,13 @@ This project:
 5. OPTIONAL - Create a pull request if you want the main repository to change the code with what you changed
 
 ## ⚙️ How it works 
-- The code just runs the same function (the function that returns the gpa value from a percentage) the same number times you have classes (which is inputted by the user)
+- The code just runs the same function (the function that returns the gpa value from a letter grade) the same number times you have classes (which is inputted by the user)
 - It then adds the result of that function to total GPA
 - The number of AP classes * 5 is also added into the total
 - That total then gets divided by the total number of classes
 
 ## ⚠️ Known Issues
-- If teacher rounds your letter grade and doesn't change the percent, then adjust your percent to the new letter grade when inputting it accordingly (The calculator doesn't know if your teacher changed your letter grade and kept your percentage the same)
-- Putting in illogical inputs skews the math (like putting in more ap classes than total classes)
-
-## 🚀 Upcoming Features
-- It will soon be off of letter grades, instead of percentage
+- No known issues at this time
 
 ## ⚖️ LICENSE
 ### MIT LICENSE
