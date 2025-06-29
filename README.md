@@ -43,7 +43,7 @@ This project:
   - It will asks how many classes had A+, A, etc
 
 ## ⚠️ Known Issues
-- No known issues at this time
+- How WCSD works is that if a class is 2 semesters (9th) or 2 terms (10-12th), it calculates it as 2 seperate classes, so input accordingly 
 
 ## ⚖️ LICENSE
 ### MIT LICENSE
