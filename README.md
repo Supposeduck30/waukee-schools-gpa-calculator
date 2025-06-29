@@ -1,5 +1,5 @@
 # Waukee School District GPA Calculator Website
-## A fully functional website built using HTML, CSS, AND JavaScript that calculates your GPA based on WCSD rules
+## A fully functional website built using HTML, CSS, and JavaScript that calculates your GPA based on WCSD rules
 ## https://waukee-schools-gpa-calculator.lovable.app/
 This project:
 - has accurate GPA calculation based on WCSD rules
